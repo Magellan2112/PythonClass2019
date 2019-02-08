@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Title: Customer Map on demographics Data solutions for Exercise 3 (Tabs)
-Author: Patrick Glettig
-Date: 17.11.2018
 """
 # import os
 import pandas as pd
@@ -121,6 +119,7 @@ def update_figure(selected_gender, join_start_date, join_end_date, birthdate_sta
                                   (demographics['Birthdate'] >= birthdate_start_date) &
                                   (demographics['Birthdate'] <= birthdate_end_date),]
      zip_size = filtered_df.groupby(["zip_city"]).size()
+
     
      zip_size = filtered_df.groupby(["zip_city", 'zip_longitude', 'zip_latitude']).size()
     
